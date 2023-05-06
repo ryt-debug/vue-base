@@ -1,6 +1,7 @@
 <template>
-    <button @click="count++">点击</button>
-    <span>{{ count }}</span>
+    <button @click="count++">
+        <span>{{ count }}</span>
+    </button>
 </template>
 
 <script>
