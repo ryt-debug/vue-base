@@ -28,14 +28,15 @@ export default {
     },
     methods: {
         getData() {
+            let id =Math.random()*10;
             //2.使用axios 进行post请求
             this.$request.post("TestController/testParams", {
-                id: 1
+                id
             }).then((res) => {
                 //请求成功的回调函数
                 console.log(res);
                 this.responseJson = res;
-                this.person.id = res;
+                this.person.id = res.id;
             }).catch((err) => {
                 //请求失败的回调函数
                 console.log(err)
