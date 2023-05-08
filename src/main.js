@@ -2,9 +2,14 @@
 
 import { createApp } from 'vue'
 import App from './components/App.vue'
+import Axios from 'axios'
+// import Axios from "./util/net.js"; // 主要是这里，引入配置好的Api
 
 // 创建应用并挂载到app，mount返回根组件的实例
-window.vm = createApp(App).mount('#app');
+var app = createApp(App);
+app.config.globalProperties.$http = Axios; // 全局配置Axios
+window.vm = app.mount('#app');
+
 
 /**
  * node_modules不是你自己的源代码，
