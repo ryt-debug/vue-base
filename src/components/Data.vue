@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import { getData } from '../apis/api.js';
 import { shallowReactive } from 'vue' // 浅层响应式对象
 
 export default {
@@ -28,27 +27,19 @@ export default {
         }
     },
     methods: {
-        // getData() {
-        //     //2.使用axios 进行post请求
-        //     this.$http.post("testParams", {
-        //         id: 1
-        //     }).then((res) => {
-        //         //请求成功的回调函数
-        //         console.log(res);
-        //         this.$data.responseJson = res;
-        //         this.$data.id = res;
-        //     }).catch((err) => {
-        //         //请求失败的回调函数
-        //         console.log(err)
-        //     })
-        // }
         getData() {
-            console.log(getData());
-            getData().then(res=>{
-                console.log( res);
-            }).catch((err)=>{
-
-            });
+            //2.使用axios 进行post请求
+            this.$request.post("TestController/testParams", {
+                id: 1
+            }).then((res) => {
+                //请求成功的回调函数
+                console.log(res);
+                this.$data.responseJson = res;
+                this.$data.person.id = res;
+            }).catch((err) => {
+                //请求失败的回调函数
+                console.log(err)
+            })
         }
     },
 }
