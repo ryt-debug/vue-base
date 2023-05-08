@@ -2,12 +2,17 @@
 
 import { createApp } from 'vue'
 import App from './components/App.vue'
-import Axios from 'axios'
-// import Axios from "./util/net.js"; // 主要是这里，引入配置好的Api
+// import Axios from 'axios'
+// import Axios from './common/http.js'
 
 // 创建应用并挂载到app，mount返回根组件的实例
 var app = createApp(App);
-app.config.globalProperties.$http = Axios; // 全局配置Axios
+
+// 配置发送请求时的基础路径
+// Axios.defaults.baseURL="http://localhost:8080/";
+// 将 axios 挂载为 app 的全局自定义属性
+// 每个组件可以通过 this 直接访问到全局挂载的自定义属性
+// app.config.globalProperties.$http = Axios;
 window.vm = app.mount('#app');
 
 
