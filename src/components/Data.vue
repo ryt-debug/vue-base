@@ -34,8 +34,8 @@ export default {
             }).then((res) => {
                 //请求成功的回调函数
                 console.log(res);
-                this.$data.responseJson = res;
-                this.$data.person.id = res;
+                this.responseJson = res;
+                this.person.id = res;
             }).catch((err) => {
                 //请求失败的回调函数
                 console.log(err)
