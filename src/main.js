@@ -3,12 +3,14 @@
 import { createApp } from 'vue'
 import App from './components/App.vue'
 import axios from './config/axiosConfig.js'
+import global from './utils/global.js'
 
 // 创建应用并挂载到app，mount返回根组件的实例
 const app = createApp(App);
 // 将 axios 挂载为 app 的全局自定义属性
 // 每个组件可以通过 this 直接访问到全局挂载的自定义属性
 app.config.globalProperties.$request = axios;
+app.config.globalProperties.$global = global;
 window.vm = app.mount('#app');
 
 

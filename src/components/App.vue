@@ -6,6 +6,8 @@
 	<Data></Data>
 	<Separator></Separator>
 	<Methods></Methods>
+	<Separator></Separator>
+	<ModularApi></ModularApi>
 </template>
 
 <script>
@@ -14,6 +16,7 @@
 	import Count from './Count.vue'
 	import Data from './Data.vue';
 	import Methods from './Methods.vue';
+	import ModularApi from './ModularApi.vue';
 
 	// 组件就是一个普通的js对象
 	export default{
@@ -27,6 +30,7 @@
 			Separator,
 			Data,
 			Methods,
+			ModularApi,
 		},
 	};
 </script>
