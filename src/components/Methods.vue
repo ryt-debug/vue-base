@@ -19,7 +19,7 @@ export default {
             },
             token: null,
 
-            // 成功请求接口并拿到数据 :D
+            // // 成功请求接口并拿到数据 :D
             // historyArray: null,
         }
     },
@@ -48,8 +48,10 @@ export default {
             this.msg = 'new World';
             this.stu.age = 17;
             this.token = this.$global.jwtToken;
+            this.$global.jwtToken = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJUeXBlIjoiMCIsImV4cCI6MTY4MzY4ODM5NSwiaXNzIjoicnl0In0.6c73U_qFFe99f7IPHiIXWvoDZT4a1fkpJUNxSAMko2c';
+            // console.log('globalToken :>> ', this.$global.jwtToken);
 
-            // 成功请求接口并拿到数据 :D
+            // // 成功请求接口并拿到数据 :D
             // this.$request.post("Reserve/HistoryRecord", {})
             // .then((res)=>{
             //     console.log(res);

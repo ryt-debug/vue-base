@@ -1,4 +1,5 @@
 import axios from 'axios'
+import global from '../utils/global.js';
 
 // java项目路径
 // axios.defaults.baseURL = 'http://localhost:8080/api/'
@@ -8,15 +9,14 @@ axios.defaults.baseURL = 'https://localhost:7082/api/'
 axios.defaults.withCredentials = false
 // 请求头，headers 信息
 axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest'
-axios.defaults.headers['Authorization'] = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjIiLCJUeXBlIjoiMCIsImV4cCI6MTY4MzY0MDA1NCwiaXNzIjoicnl0In0.axahWLrZygAAy3Ik4-PwJMbik6KpBOxfM05U5xDUkPY' || ''
 // 默认 post 请求，使用 application/json 形式
 axios.defaults.headers.post['Content-Type'] = 'application/json-patch+json'
 
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
     // 在发送请求之前做些什么
-    if (this.$global.jwtToken != null || this.$global.jwtToken != '') {
-        config.headers.Authorization = this.$global.jwtToken;
+    if (global.jwtToken != null || global.jwtToken != '') {
+        config.headers.Authorization = global.jwtToken;
     }
     return config;
 }, function (error) {
