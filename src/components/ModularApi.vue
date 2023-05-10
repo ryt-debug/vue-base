@@ -1,6 +1,7 @@
 <template>
+    <h1>组合式Api</h1>
     <div>{{ s }}</div>
-    <div>{{ person }}</div>
+    <div>{{ person}}</div>
     <button @click="setAge">改变年龄</button>
 </template>
 
@@ -17,6 +18,7 @@
      * ref()
      * 接收一个任意值，并返回它的响应式代理
      * 生成响应式代理是，将值包装为一个对象
+     * 模板中访问ref会被自动解包(在引用的后面自动加.value)
      */
     const person = reactive({
         name:"张三",
