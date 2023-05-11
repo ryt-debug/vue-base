@@ -1,5 +1,5 @@
 <template>
-    <h1>组合式Api</h1>
+    <h3>组合式Api</h3>
     <div>{{ s }}</div>
     <div>{{ person}}</div>
     <button @click="setAge">改变年龄</button>

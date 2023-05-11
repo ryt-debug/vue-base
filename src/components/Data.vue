@@ -30,7 +30,7 @@ export default {
         getData() {
             let id =Math.random()*10;
             //2.使用axios 进行post请求
-            this.$request.post("TestController/testParams", {
+            this.$request.post("/TestController/testParams", {
                 id
             }).then((res) => {
                 //请求成功的回调函数

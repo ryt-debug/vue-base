@@ -51,7 +51,7 @@ export default {
             // console.log('globalToken :>> ', this.$global.jwtToken);
 
             // // 成功请求接口并拿到数据 :D
-            // this.$request.post("Reserve/HistoryRecord", {})
+            // this.$request.post("/Reserve/HistoryRecord", {})
             // .then((res)=>{
             //     console.log(res);
             //     this.historyArray = res.data;

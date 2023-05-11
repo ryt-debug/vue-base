@@ -8,6 +8,8 @@
 	<Methods></Methods>
 	<Separator></Separator>
 	<ModularApi></ModularApi>
+	<Separator></Separator>
+	<Send></Send>
 </template>
 
 <script>
@@ -17,6 +19,7 @@
 	import Data from './Data.vue';
 	import Methods from './Methods.vue';
 	import ModularApi from './ModularApi.vue';
+	import Send from './SendRequest.vue';
 
 	// 组件就是一个普通的js对象
 	export default{
@@ -31,6 +34,7 @@
 			Data,
 			Methods,
 			ModularApi,
+			Send,
 		},
 	};
 </script>

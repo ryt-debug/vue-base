@@ -9,8 +9,8 @@ import global from './common/global.js'
 const app = createApp(App);
 // 将 axios 挂载为 app 的全局自定义属性
 // 每个组件可以通过 this 直接访问到全局挂载的自定义属性
-app.config.globalProperties.$request = axios;
-app.config.globalProperties.$global = global;
+app.provide('$request',axios);
+app.provide('$global',global);
 window.vm = app.mount('#app');
 
 

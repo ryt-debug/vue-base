@@ -2,9 +2,9 @@ import axios from 'axios'
 import global from '../common/global.js';
 
 // java项目路径
-// axios.defaults.baseURL = 'http://localhost:8080/api/'
+axios.defaults.baseURL = 'http://localhost:8080/api'
 // c#项目路径
-axios.defaults.baseURL = 'https://localhost:7082/api/'
+// axios.defaults.baseURL = 'https://localhost:7082/api'
 // 携带 cookie，对目前的项目没有什么作用，因为我们是 token 鉴权
 axios.defaults.withCredentials = false
 // 请求头，headers 信息
