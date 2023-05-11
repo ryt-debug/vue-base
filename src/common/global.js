@@ -1,9 +1,10 @@
-
 // const jwtToken = '++++++++++++++';
 
 // export default {
 //     jwtToken,
 // }
+
+
 let global = {};
 
 global.jwtToken = '';

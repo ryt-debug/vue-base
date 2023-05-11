@@ -1,5 +1,5 @@
 import axios from 'axios'
-import global from '../utils/global.js';
+import global from '../common/global.js';
 
 // java项目路径
 // axios.defaults.baseURL = 'http://localhost:8080/api/'

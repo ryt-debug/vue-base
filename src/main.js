@@ -3,7 +3,7 @@
 import { createApp } from 'vue'
 import App from './components/App.vue'
 import axios from './config/axiosConfig.js'
-import global from './utils/global.js'
+import global from './common/global.js'
 
 // 创建应用并挂载到app，mount返回根组件的实例
 const app = createApp(App);

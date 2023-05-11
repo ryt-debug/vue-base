@@ -41,8 +41,7 @@ export default {
     },
     methods: {
         test() {
-            console.log("testtesttest")
-            // alert("test函数");
+            console.log(new Date(Date.now()));
         },
         changeMsg() {
             this.msg = 'new World';
