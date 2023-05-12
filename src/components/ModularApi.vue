@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-    import { reactive, ref } from 'vue';
+    import { reactive, ref, computed } from 'vue';
 
     let s = ref("++++++");
     console.log('s :>> ', s.value);
@@ -18,7 +18,10 @@
      * ref()
      * 接收一个任意值，并返回它的响应式代理
      * 生成响应式代理是，将值包装为一个对象
-     * 模板中访问ref会被自动解包(在引用的后面自动加.value)
+     * 在模板中访问ref会被自动解包(在引用的后面自动加.value)
+     * 
+     * computed()
+     * 生成计算属性
      */
     const person = reactive({
         name:"张三",
@@ -27,6 +30,9 @@
     function setAge(){
         person.age++;
     };
+    let newMsg = computed(()=>{
+        return msg+'cnm';
+    });
 </script>
 
 <!-- 比较原始的写法

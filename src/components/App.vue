@@ -10,6 +10,8 @@
 	<ModularApi></ModularApi>
 	<Separator></Separator>
 	<Send></Send>
+	<Separator></Separator>
+	<ChangeImage></ChangeImage>
 </template>
 
 <script>
@@ -20,6 +22,7 @@
 	import Methods from './Methods.vue';
 	import ModularApi from './ModularApi.vue';
 	import Send from './SendRequest.vue';
+	import ChangeImage from './ChangeImage.vue';
 
 	// 组件就是一个普通的js对象
 	export default{
@@ -35,6 +38,7 @@
 			Methods,
 			ModularApi,
 			Send,
+			ChangeImage,
 		},
 	};
 </script>
