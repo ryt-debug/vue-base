@@ -16,6 +16,8 @@
 	<Style1></Style1>
 	<Separator></Separator>
 	<Exercise1></Exercise1>
+	<Separator></Separator>
+	<DynamicComponent></DynamicComponent>
 </template>
 
 <script setup>
@@ -28,7 +30,8 @@ import ModularApi from './ModularApi.vue';
 import Send from './SendRequest.vue';
 import Bind from './Bind.vue';
 import Style1 from './Style1.vue';
-import Exercise1 from './Exercise1.vue';
+import Exercise1 from './Exercise1/Exercise.vue';
+import DynamicComponent from './DynamicComponent.vue';
 
 // 组件就是一个普通的js对象
 
