@@ -11,36 +11,31 @@
 	<Separator></Separator>
 	<Send></Send>
 	<Separator></Separator>
-	<ChangeImage></ChangeImage>
+	<Bind></Bind>
+	<Separator></Separator>
+	<Style1></Style1>
+	<Separator></Separator>
+	<Exercise1></Exercise1>
 </template>
 
-<script>
-	import App2 from './App2.vue'
-	import Separator from './Separator.vue';
-	import Count from './Count.vue'
-	import Data from './Data.vue';
-	import Methods from './Methods.vue';
-	import ModularApi from './ModularApi.vue';
-	import Send from './SendRequest.vue';
-	import ChangeImage from './ChangeImage.vue';
+<script setup>
+import App2 from './App2.vue'
+import Separator from './Separator.vue';
+import Count from './Count.vue'
+import Data from './Data.vue';
+import Methods from './Methods.vue';
+import ModularApi from './ModularApi.vue';
+import Send from './SendRequest.vue';
+import Bind from './Bind.vue';
+import Style1 from './Style1.vue';
+import Exercise1 from './Exercise1.vue';
 
-	// 组件就是一个普通的js对象
-	export default{
-		// data中的this就是组件实例
-		// data返回一个对象作为返回值，vue会对该对象进行代理，从而将其转换为响应式数据
-		// 数据变化时网页也会发生变化，这种数据叫做响应式数据
-		// data() {},
-		components:{
-			app2:App2,
-			count:Count,
-			Separator,
-			Data,
-			Methods,
-			ModularApi,
-			Send,
-			ChangeImage,
-		},
-	};
+// 组件就是一个普通的js对象
+
+// data中的this就是组件实例
+// data返回一个对象作为返回值，vue会对该对象进行代理，从而将其转换为响应式数据
+// 数据变化时网页也会发生变化，这种数据叫做响应式数据
+// data() {},
 </script>
 
 
