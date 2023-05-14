@@ -4,7 +4,7 @@
         <Photo :item="photoItem"></Photo>
         <div class="desc">
             <span class="name">{{ item.name }}</span>
-            <HotBar :hot="item.hot" :max-hot="item.hot"></HotBar>
+            <HotBar :hot="item.hot" :max-hot="props.maxHot"></HotBar>
         </div>
     </div>
 </template>
@@ -22,7 +22,7 @@ import Photo from './Exercise-photo.vue';
 import HotBar from './Exercise-hotbar.vue'
 
 // 数组只能定义参数名，常用的简单配置
-let props = defineProps(['item']);
+let props = defineProps(['item', 'maxHot']);
 // 对象可以对参数进行限制，不常用的严谨配置
 // let props = defineProps({
 //     item: {

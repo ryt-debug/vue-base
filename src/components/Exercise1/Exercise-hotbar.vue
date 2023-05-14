@@ -7,10 +7,10 @@
 <script setup>
 import { computed } from 'vue';
 
-let props = defineProps(['hot', 'maxhot'])
+let props = defineProps(['hot', 'maxHot'])
 
-let w = computed(()=>{
-    return (props.hot / props.maxhot) * 100 + '%';
+let w = computed(() => {
+    return (props.hot / props.maxHot) * 100 + '%';
 });
 
 </script>

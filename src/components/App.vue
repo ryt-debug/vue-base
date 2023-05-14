@@ -18,6 +18,11 @@
 	<Exercise1></Exercise1>
 	<Separator></Separator>
 	<DynamicComponent></DynamicComponent>
+	<Separator></Separator>
+	<VFor></VFor>
+	<Separator></Separator>
+	<!-- 插槽入口 -->
+	<SlotButton>此文本由Slot插入</SlotButton>
 </template>
 
 <script setup>
@@ -32,6 +37,8 @@ import Bind from './Bind.vue';
 import Style1 from './Style1.vue';
 import Exercise1 from './Exercise1/Exercise.vue';
 import DynamicComponent from './DynamicComponent.vue';
+import VFor from './vFor.vue';
+import SlotButton from './SlotButton.vue';
 
 // 组件就是一个普通的js对象
 

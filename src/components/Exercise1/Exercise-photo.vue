@@ -15,7 +15,7 @@ let item = props.item;
 let color = computed(() => {
     if (item.rank === 1) {
         return "rgb(254, 45, 70)";
-    } else if (rank === 2) {
+    } else if (item.rank === 2) {
         return "rgb(245, 102, 1)";
     } else {
         return "rgb(247, 169, 1)";
