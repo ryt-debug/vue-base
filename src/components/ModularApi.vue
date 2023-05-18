@@ -6,10 +6,12 @@
 </template>
 
 <script setup>
-    import { reactive, ref, computed } from 'vue';
+    import { reactive, ref, computed, inject } from 'vue';
+    const global = inject('$global');
 
     let s = ref("++++++");
     console.log('s :>> ', s.value);
+    console.log('ForMat:' + global.formatDate(Date.now()));
     /**
      * reactive()
      * 返回一个指定对象的深层响应式代理对象
