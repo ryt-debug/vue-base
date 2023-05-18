@@ -22,7 +22,16 @@
 	<VFor></VFor>
 	<Separator></Separator>
 	<!-- 插槽入口 -->
-	<SlotButton>此文本由Slot插入</SlotButton>
+	<SlotButton>
+		此文本由Slot插入
+		<div>div</div>
+	</SlotButton>
+	<Separator></Separator>
+	<!-- 具名插槽 -->
+	<SlotWrapper>
+		<template v-slot:aa>hhh</template>
+		<template #bb>...</template>
+	</SlotWrapper>
 </template>
 
 <script setup>
@@ -39,6 +48,7 @@ import Exercise1 from './Exercise1/Exercise.vue';
 import DynamicComponent from './DynamicComponent.vue';
 import VFor from './vFor.vue';
 import SlotButton from './SlotButton.vue';
+import SlotWrapper from './SlotWrapper.vue';
 
 // 组件就是一个普通的js对象
 

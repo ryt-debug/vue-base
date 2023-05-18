@@ -1,10 +1,18 @@
 <template>
-    <Tap></Tap>
+    <Tap>
+        <template #0>
+            <TapList :items="players" :maxHot="maxHot"></TapList>
+        </template>
+        <template #1>
+            <TapList :items="teams" :maxHot="maxHot"></TapList>
+        </template>
+    </Tap>
 </template>
 
 <script setup>
 import { reactive, ref } from 'vue';
 import Tap from './Exercise-tap.vue';
+import TapList from './Exercise-tap-list.vue';
 
 
 // 父组件通常使用 props 将数据传递给子组件
@@ -55,6 +63,4 @@ let teams = ref([
 ]);
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

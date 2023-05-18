@@ -9,6 +9,7 @@ axios.defaults.baseURL = 'http://localhost:8080/api'
 axios.defaults.withCredentials = false
 // 请求头，headers 信息
 axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest'
+axios.defaults.headers['Access-Control-Allow-Origin'] = '*'
 // 默认 post 请求，使用 application/json 形式
 axios.defaults.headers.post['Content-Type'] = 'application/json-patch+json'
 

@@ -11,11 +11,13 @@
              -->
             <!-- 球员 -->
             <div v-show="isShow">
-                <TapList :items="players" :maxHot="maxHot"></TapList>
+                <!-- <TapList :items="players" :maxHot="maxHot"></TapList> -->
+                <slot name="0"></slot>
             </div>
             <!-- 球队 -->
             <div v-show="!isShow">
-                <TapList :items="teams" :maxHot="maxHot"></TapList>
+                <!-- <TapList :items="teams" :maxHot="maxHot"></TapList> -->
+                <slot name="1"></slot>
             </div>
 
             <!-- if-else -->

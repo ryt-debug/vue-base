@@ -7,6 +7,6 @@
 
 let global = {};
 
-global.jwtToken = '';
+global.jwtToken = '...';
 
 export default global;
