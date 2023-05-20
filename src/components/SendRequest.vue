@@ -8,12 +8,15 @@
         姓名:<input type="text" v-model="name">
         学号:<input type="text" v-model="number">
         <button @click="Login">登录</button>
+        <br>
+        <button @click="GetToken">getToken</button>
     </div>
 </template>
 
 <script setup>
 import { inject, onMounted, ref, reactive } from "vue";
 const request = inject('$request');
+const global = inject('$global');
 
 let name = ref(''), number = ref('');
 
@@ -47,6 +50,17 @@ function Login() {
         number: number.value,
     }).then((res) => {
         console.log(res);
+    }).catch((err) => {
+        console.log(err);
+    });
+}
+
+function GetToken() {
+    request.get('/TestController/getToken', {
+        params: { Id: 1 },
+    }).then((res) => {
+        global.jwtToken = res;
+        console.log('token :>> ', res);
     }).catch((err) => {
         console.log(err);
     });

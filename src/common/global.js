@@ -7,7 +7,7 @@
 
 let global = {};
 
-global.jwtToken = '...';
+global.jwtToken = '';
 
 global.formatDate = function (time) {
     let date = new Date(time);
