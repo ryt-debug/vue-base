@@ -10,6 +10,8 @@
         <button @click="Login">登录</button>
         <br>
         <button @click="GetToken">getToken</button>
+        <br>
+        <button @click="GetStudent">模糊查询学生</button>
     </div>
 </template>
 
@@ -63,6 +65,18 @@ function GetToken() {
         console.log('token :>> ', res);
     }).catch((err) => {
         console.log(err);
+    });
+}
+
+function GetStudent() {
+    request.post('/WebController/getStudentDetailsByFuzzyQuery', {
+        name: name.value,
+        number: number.value,
+    }).then((res)=>{
+        console.log(res);
+    }).catch((err)=>{
+        console.log(err);
+        return;
     });
 }
 </script>
