@@ -32,6 +32,8 @@
 		<template v-slot:aa>hhh</template>
 		<template #bb>...</template>
 	</SlotWrapper>
+	<Separator></Separator>
+	<FormSubmit></FormSubmit>
 </template>
 
 <script setup>
@@ -49,6 +51,7 @@ import DynamicComponent from './DynamicComponent.vue';
 import VFor from './vFor.vue';
 import SlotButton from './SlotButton.vue';
 import SlotWrapper from './SlotWrapper.vue';
+import FormSubmit from './FormSubmit.vue';
 
 // 组件就是一个普通的js对象
 

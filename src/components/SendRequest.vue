@@ -13,6 +13,36 @@
         <br>
         <button @click="GetStudent">模糊查询学生</button>
     </div>
+
+    <!-- 
+        /**
+        * 事件修饰符：
+        *  .stop 停止事件的传播
+        *  .capture 在捕获阶段触发事件
+        *  .prevent 取消默认行为
+        *  .self 只有事件由自身触发时才会有效
+        *  .once 绑定一个一次性事件
+        *  .passive 主要用于提升滚动事件的性能
+        */
+
+        /**
+        * 透传属性
+        *     在组件上设置属性会自动传给根组件
+        *     方便在父组件中为子组件设置属性
+        *     透传会发生在没有被声明的props和emit的属性上
+        *     自动的透传只适用于单根组件
+        *     在模板中可以通过$attrs来访问透传的属性
+        *     在script中可以使用useAttrs()来访问透传属性
+        * 
+        *     在不想使用透传属性的模板中加上
+        *     <script>
+        *         export default {
+        *             inheritAttrs: false；
+        *         }
+        *     </script>
+        *     关闭该模板的透传
+        */
+     -->
 </template>
 
 <script setup>
